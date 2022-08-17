@@ -2,7 +2,10 @@ class Solution {
 public:
     // find the cycle in the directed graph
     bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+        // vector<data_type> v[size] declare a two dimensional array with fixed number of rows where each row is vector of varialbe lengh.
+        // Each index of array stores a vector which can be traversed and accessed using iterators
         vector<int> adj[numCourses];
+        
         for(int i{};i<prerequisites.size();i++){
             adj[prerequisites[i][1]].push_back(prerequisites[i][0]);
         }
